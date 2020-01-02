@@ -1,0 +1,2 @@
+# streams
+React training project
