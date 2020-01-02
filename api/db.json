@@ -1,0 +1,39 @@
+{
+  "streams": [
+    {
+      "name": "Hello",
+      "description": "A test stream",
+      "id": 1
+    },
+    {
+      "title": "dsads ad ass a",
+      "description": "d sad asdasd sa",
+      "id": 2
+    },
+    {
+      "title": "dfsafs fds",
+      "description": "fdsfdsfds",
+      "id": 3
+    },
+    {
+      "title": "another stream",
+      "description": "Another streams",
+      "id": 4
+    },
+    {
+      "title": "A stream ",
+      "description": "anoster descr",
+      "id": 5
+    },
+    {
+      "title": "A stream ",
+      "description": "anoster descr",
+      "id": 6
+    },
+    {
+      "title": "A stream ",
+      "description": "anoster descr",
+      "id": 7
+    }
+  ]
+}

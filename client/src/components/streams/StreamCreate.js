@@ -1,6 +1,9 @@
 import React from 'react';
 import {Field, reduxForm} from 'redux-form';
 
+import {connect} from 'react-redux';
+import {createStream} from '../../actions'
+
 class StreamCreate extends React.Component {
 
     //Destructing meta
@@ -24,15 +27,15 @@ class StreamCreate extends React.Component {
        const cname=`field ${meta.error && meta.touched ? 'error' : ''}`
         return (
             <div className={cname}>
-                <label>{label}</label>  
+                <label>{label}</label>
                 <input {...input} autoComplete="off"/>
                 <div>{this.renderError(meta)}</div>
             </div>
         )
     }
 
-    onSubmit(formValues) {
-        console.log(formValues)
+    onSubmit = (formValues) =>  {
+        this.props.createStream(formValues);
     }
 
     render() {
@@ -59,7 +62,9 @@ const validate = (formValues) => {
     return errors;
 }
 
-export default reduxForm({
+const formWrapped =  reduxForm({
     form: 'streamCreate ',
     validate: validate,
 })(StreamCreate);
+
+export default connect(null,{createStream})(formWrapped);
