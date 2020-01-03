@@ -1,12 +1,6 @@
 {
   "streams": [
     {
-      "title": "Me refactoring react components",
-      "description": "Watch this out!! ;)aaaaAAAAAAAAAAAAAAAAAAA",
-      "userId": "108501489789741316447",
-      "id": 13
-    },
-    {
       "title": "Blha",
       "description": "dsadasdas",
       "id": 14
@@ -15,30 +9,6 @@
       "title": "Edited teste",
       "description": "testteteee",
       "id": 15
-    },
-    {
-      "title": "sssssssssssssss",
-      "description": "sssssssssssssss",
-      "userId": "108501489789741316447",
-      "id": 16
-    },
-    {
-      "title": "dsadsa",
-      "description": "dsadsaa",
-      "userId": "108501489789741316447",
-      "id": 17
-    },
-    {
-      "title": "This is a stream",
-      "description": "NEW edited",
-      "userId": "108501489789741316447",
-      "id": 18
-    },
-    {
-      "title": "Componet dends",
-      "description": "fdsfds",
-      "userId": "108501489789741316447",
-      "id": 19
     }
   ]
 }
