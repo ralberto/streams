@@ -1,11 +1,6 @@
 import {CREATE_STREAM, EDIT_STREAM, DELETE_STREAM, FETCH_STREAMS, FETCH_STREAM} from '../constants/actionTypes'
 
 
-class Streams {
-    constructor() {
-    }
-}
-
 export const streamsReducer = (streams = {}, action) => {
     switch(action.type) {
         case CREATE_STREAM || EDIT_STREAM:
