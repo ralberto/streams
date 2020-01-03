@@ -10,6 +10,7 @@ import {
 
 import  streams from '../api/streams';
 import {httpCreateSuccess} from '../utils'
+import history from '../history'
 
 export const signIn = (userId) => {
     return {    
@@ -28,9 +29,12 @@ export const signOut = () => {
 export const createStream = (formValues) => {
     //Make use of redux thunk
     return async (dispatch, getSatate) => {
-        const response = await streams.post('/streams', formValues)
+        const {userId} = getSatate().auth
+        const response = await streams.post('/streams', {...formValues, userId: userId})
         if(httpCreateSuccess(response.status)) {
             dispatch({type: CREATE_STREAM,  payload: response.data })
+            //Do some programmatic navigation to get the user back to the root route
+            history.push("/")
         } 
     }
 }
@@ -47,8 +51,9 @@ export const fetchStream = (id) => async dispatch => {
 
 
 export const editStream = (id, formValues) => async dispatch => {
-    const response = await streams.put(`/streams/${id}`, formValues)
+    const response = await streams.patch(`/streams/${id}`, formValues)
     dispatch({type: EDIT_STREAM, payload: response.data })
+    history.push("/")
 }
 
 export const deleteStream = (id) => async dispatch => {
